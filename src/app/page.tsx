@@ -5,6 +5,7 @@ import { cookies } from 'next/headers';
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import { redirect } from 'next/navigation';
 import { redis } from '@/lib/db';
+import { User } from '@/db/dummy';
 
 
 

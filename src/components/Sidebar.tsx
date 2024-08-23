@@ -102,7 +102,7 @@ const Sidebar = ({ isCollapsed,users }: SidebarProps) => {
             <div className="hidden md:flex gap-2 items-center">
               <Avatar className="flex justify-center items-center">
                 <AvatarImage
-                  src={user?.picture?.trim.length === 0 ? "/user-placeholder.png" : user?.picture}
+                  src={user?.picture || "/user-placeholder.png" }
                   alt="avatar"
                   referrerPolicy="no-referrer"
                   // sometimes the image is not loaded because of the referrer policy. this is why we use this 
