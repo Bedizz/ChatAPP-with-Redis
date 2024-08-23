@@ -17,7 +17,7 @@ const MessageList = () => {
   const {data:messages,isLoading:isMessagesLoading}=useQuery({
     queryKey:["messages", selectedUser?.id],
     queryFn:async ()=>{
-      if(currentUser && selectedUser) {
+      if (selectedUser && currentUser ) {
         return await getMessages(selectedUser?.id!, currentUser?.id)
       }
     },
